@@ -1,0 +1,44 @@
+'''
+
+This week we will work with dictionaries.  
+Create a program that includes a dictionary of stocks. 
+Your dictionary should include at least 10 ticker symbols.  
+The key should be the stock ticker symbol and the value should be the current 
+price of the stock (the values can be fictional).  Ask the user to enter a 
+ticker symbol.  Your program will search the dictionary for the ticker symbol 
+and then print the ticker symbol and the stock price.  If the ticker symbol 
+isn’t located print a message indicating that the ticker symbol wasn’t found.
+
+'''
+stocks = {
+    'SNAP': 77.55,
+    'RBLX': 76.57,
+    'TSLA': 849.30,
+    'HRB': 24.75,
+    'MSFT': 304.21,
+    'ORCL': 95.29,
+    'EDR': 24.70,
+    'TWTR': 62.77,
+    'HOOD': 40.90,
+    'LCID': 23.99,
+    'COCO': 18.22,
+    'AVDX': 23.45,
+    'COIN': 281.00,
+    'SNDL': 0.66
+}
+
+print('Enter the ticker symbol, or type exit to quit')
+ticker = ''
+
+while True:
+    ticker = input('Input: ')
+
+    if ticker == 'exit':
+        break
+
+    if ticker in stocks:
+        print(str(ticker) + " has a stock price of $"+ str(stocks[ticker]))
+        ##print("{query} has a stock price of {stocks[query]}")
+    else:
+        print(str(ticker) + ' was not found, please try again: ')
+
